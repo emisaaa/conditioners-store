@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emisa</title>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="css_part.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_name">
+            <div class="header_logo">
+                <a href="#"><img src="logo.png" alt="logo" width="110px"></a>
+            </div>
+            <div class="header_text">
+                <h1 class="header_h1">Emisa</h1>
+                <p class="text-logo">веб-разработчик</p>
+            </div>
+        </div>
+        <div>
+            <a href="#contacts" class="header_button">Связаться</a>
+            <a href="#" class="header_button" onclick="changeBC()">Сменить тему</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Главная</a></li>
+            <li class="menu-item"><a href="#skills">Навыки</a></li>
+            <li class="menu-item"><a href="#works">Работы</a>
+                <ul class="dropdown">
+                    <li class="dropdown-item"><a href="#works">Магазина камер видеонаблюдения</a></li>
+                    <li class="dropdown-item"><a href="#works">Сайт по мультфильму "Шрек"</a></li>
+                    <li class="dropdown-item"><a href="#works">Сайт-визитка</a></li>
+                    <li class="dropdown-item"><a href="#works">Telegram бот с новостями</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#contacts">Контакты</a></li>
+            <li class="menu-item"><a href="#blog">Связь</a></li>
+        </ul>
+    </nav>
+
+    <section class="about">
+        <div class="slider">
+            <div class="slide">
+                <div class="slideInf">
+                    <div class="about-text">
+                        <h1>Привет, меня зовут Александра. Я Web - разработчик</h1>
+                        <p>Фронтенд-разработчик готовая к новым проектам. Увлечена UI/UX</p>
+                        <a href="#works" class="about-button">Работы</a>
+                    </div>
+                    <img src="Rectangle2.png" alt="no" width="370px">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slideInf">
+                    <div class="about-text">
+                        <h1>Знаю python и <br>английский язык</h1>
+                        <p>А ещё умею рисовать</p>
+                    </div>
+                    <img src="Rectangle3.png" alt="no" width="370px">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slideInf">
+                    <div class="about-text">
+                        <h1>Люблю компьютерные<br> игры</h1>
+                        <p>Не упущу возможности поиграть во что-то <br> с друзьями в свободное время</p>
+                    </div>
+                    <img src="Rectangle.png" alt="no" width="370px">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>Навыки</h2>
+        <div class="skills-items">
+            <h3>CSS</h3>
+            <h3>JavaScript</h3>
+            <h3>Html</h3>
+            <h3>Python</h3>
+        </div>
+    </section>
+
+    <section class="works" id="works">
+        <div class="works-text">
+            <h2>Работы</h2>
+            <p>Ниже вы можете ознакомиться с моими недавними работами</p>
+        </div>
+        <div class="works-items">
+            <div class="work-item" data-aos="flip-up">
+                <div class="work-text">
+                    <h3>Магазин мебели <br> <br> <br></h3>
+                    <p>Проект по созданию сайта для компании, устанавливающей вид еонаблюдение. При создании
+                        использовались CSS, HTML и JS.</p>
+                </div>
+            </div>
+            <div class="work-item" data-aos="flip-up">
+                <div class="work-text">
+                    <h3>Сайт компании с услугами усановки кондиционеров</h3>
+                    <p>Проект по созданию сайта для компании, устанавливающей кондиционеры Haier. При создании
+                        использовались CSS, HTML и JS.</p>
+                </div>
+            </div>
+            <div class="work-item" data-aos="flip-up">
+                <div class="work-text">
+                    <h3>Ознакомительный сайт-визитка</h3>
+                    <p>Сайт, на котором вы находитесь в данный момент.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="form-container" data-aos="zoom-out">
+            <h2>Связаться со мной</h2>
+            <form onsubmit="submitForm(event)" id="myForm">
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea name="message" id="message" cols="30" rows="10" required placeholder="Сообщение"></textarea>
+                <button type="submit">Отправить сообщение</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="blog">
+        <a href="#" class="footer-logo"><img src="logo.png" alt="No" width="170"></a>
+        <p>Этот сайт был создан А.Ю. Гаран. All rights reserved. Emisa. © 2023</p>
+        <div class="social">
+            <a href="https://t.me/emisa004" target="_blank"><img src="tg.png" alt="" width="45"></a>
+            <a href="https://wa.me/qr/AFHDVU42DKS5B1" target="_blank"><img src="WhatsApp.png" alt="" width="44"></a>
+            <a href="mailto:garan.aleksandra@gmail.com"><img src="mail.png" alt="" width="47"></a>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <script src="code.js"></script>
+</body>
+
+</html>
